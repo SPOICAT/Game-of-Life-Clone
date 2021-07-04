@@ -6,15 +6,15 @@ enum {
 }
 
 const directions = [
-		Vector2.UP,
-		Vector2.DOWN,
-		Vector2.LEFT,
-		Vector2.RIGHT,
-		Vector2.UP + Vector2.LEFT,
-		Vector2.DOWN + Vector2.LEFT,
-		Vector2.DOWN + Vector2.RIGHT,
-		Vector2.UP + Vector2.RIGHT
-	]
+	Vector2.UP,
+	Vector2.DOWN,
+	Vector2.LEFT,
+	Vector2.RIGHT,
+	Vector2.UP + Vector2.LEFT,
+	Vector2.DOWN + Vector2.LEFT,
+	Vector2.DOWN + Vector2.RIGHT,
+	Vector2.UP + Vector2.RIGHT
+]
 
 
 export var cellmap_size : Vector2

@@ -15,27 +15,20 @@ margin_right = 124.0
 margin_bottom = 20.0
 text = "Simulate 1gen"
 
-[node name="Play" type="Button" parent="."]
+[node name="Playstop" type="Button" parent="."]
 margin_top = 24.0
 margin_right = 124.0
 margin_bottom = 44.0
-text = "Play"
+toggle_mode = true
+text = " Play/Stop"
 
-[node name="Stop" type="Button" parent="."]
+[node name="Paint" type="Button" parent="."]
 margin_top = 48.0
 margin_right = 124.0
 margin_bottom = 68.0
-text = "Stop"
-
-[node name="Place" type="Button" parent="."]
-margin_top = 72.0
-margin_right = 124.0
-margin_bottom = 92.0
 toggle_mode = true
-text = "Place Cells"
+text = "Paint Cells"
 
 [connection signal="button_down" from="Simulate" to="." method="_on_Simulate_button_down"]
-[connection signal="button_down" from="Play" to="." method="_on_Play_button_down"]
-[connection signal="button_down" from="Stop" to="." method="_on_Stop_button_down"]
-[connection signal="toggled" from="Place" to="." method="_on_Button_toggled"]
-[connection signal="toggled" from="Place" to="." method="_on_Place_toggled"]
+[connection signal="toggled" from="Playstop" to="." method="_on_Playstop_toggled"]
+[connection signal="toggled" from="Paint" to="." method="_on_Paint_toggled"]

@@ -8,9 +8,20 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Camera2D",
+"class": "Cam",
+"language": "GDScript",
+"path": "res://Cam.gd"
+} ]
+_global_script_class_icons={
+"Cam": ""
+}
+
 [application]
 
 config/name="Game of Life Clone"
+run/main_scene="res://Main/Main.tscn"
 config/icon="res://icon.png"
 
 [input]
