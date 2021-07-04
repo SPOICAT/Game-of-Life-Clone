@@ -29,6 +29,35 @@ margin_bottom = 68.0
 toggle_mode = true
 text = "Paint Cells"
 
+[node name="Label" type="Label" parent="."]
+margin_top = 72.0
+margin_right = 124.0
+margin_bottom = 86.0
+text = "Size:"
+
+[node name="Size" type="HBoxContainer" parent="."]
+margin_top = 90.0
+margin_right = 124.0
+margin_bottom = 114.0
+
+[node name="x" type="LineEdit" parent="Size"]
+margin_right = 58.0
+margin_bottom = 24.0
+placeholder_text = "x"
+
+[node name="y" type="LineEdit" parent="Size"]
+margin_left = 62.0
+margin_right = 120.0
+margin_bottom = 24.0
+placeholder_text = "y"
+
+[node name="SetSize" type="Button" parent="."]
+margin_top = 118.0
+margin_right = 124.0
+margin_bottom = 138.0
+text = "Set Size"
+
 [connection signal="button_down" from="Simulate" to="." method="_on_Simulate_button_down"]
 [connection signal="toggled" from="Playstop" to="." method="_on_Playstop_toggled"]
 [connection signal="toggled" from="Paint" to="." method="_on_Paint_toggled"]
+[connection signal="button_down" from="SetSize" to="." method="_on_SetSize_button_down"]

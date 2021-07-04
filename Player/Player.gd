@@ -21,6 +21,14 @@ func _on_Playstop_toggled(button_pressed):
 		cell_map.get_node("SimulationTimer").start()
 	else:
 		cell_map.get_node("SimulationTimer").stop()
+		
+
+func _on_SetSize_button_down():
+	cell_map.cellmap_size = Vector2(
+		$Size/x.text as float,
+		$Size/y.text as float
+	)
+	owner.update_drawn_grid()
 
 
 func _input(event):
@@ -28,7 +36,6 @@ func _input(event):
 		if event is InputEventMouseButton:
 			var clicked = get_global_mouse_position() * (cell_map.cellmap_size.x / 64) * 4
 			clicked = cell_map.world_to_map(clicked)
-			print(clicked)
 			if Input.is_action_pressed("place_alive_cell"):
 				cell_map.set_cell(clicked.x, clicked.y, cell_map.ALIVE_CELL)
 			if Input.is_action_pressed("place_dead_cell"):
