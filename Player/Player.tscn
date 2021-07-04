@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Player/Player.gd" type="Script" id=1]
+
+[node name="Player" type="VBoxContainer"]
+margin_right = 124.0
+margin_bottom = 92.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Simulate" type="Button" parent="."]
+margin_right = 124.0
+margin_bottom = 20.0
+text = "Simulate 1gen"
+
+[node name="Play" type="Button" parent="."]
+margin_top = 24.0
+margin_right = 124.0
+margin_bottom = 44.0
+text = "Play"
+
+[node name="Stop" type="Button" parent="."]
+margin_top = 48.0
+margin_right = 124.0
+margin_bottom = 68.0
+text = "Stop"
+
+[node name="Place" type="Button" parent="."]
+margin_top = 72.0
+margin_right = 124.0
+margin_bottom = 92.0
+toggle_mode = true
+text = "Place Cells"
+
+[connection signal="button_down" from="Simulate" to="." method="_on_Simulate_button_down"]
+[connection signal="button_down" from="Play" to="." method="_on_Play_button_down"]
+[connection signal="button_down" from="Stop" to="." method="_on_Stop_button_down"]
+[connection signal="toggled" from="Place" to="." method="_on_Button_toggled"]
+[connection signal="toggled" from="Place" to="." method="_on_Place_toggled"]
